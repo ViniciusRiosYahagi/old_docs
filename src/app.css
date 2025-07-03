@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'tailwindcss';
+
+:root {
+   --color1: #e0e0e0;
+   --color2: rgb(147, 248, 255);
+   --color3: blue;
+}
+
+body, html {
+   font-family: "Courier Prime", monospace;
+   background-color: var(--color1);
+}
