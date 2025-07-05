@@ -1,4 +1,5 @@
 export { default as Documents } from "./Documents.svelte"
-export { default as Button } from "./Button.svelte"
+export { default as Button } from "./ui/Button.svelte"
 export { default as Header } from "./layouts/Header.svelte"
-export { default as Input } from "./Input.svelte"
+export { default as Input } from "./ui/Input.svelte"
+export { default as LogoIcon } from "./icons/LogoIcon.svelte"

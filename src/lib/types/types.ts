@@ -3,9 +3,9 @@ import type { Snippet } from "svelte";
 export interface DocumentProps {
   id: string;
   title: string;
-  description: string;
+  content: string;
   category: string;
-  name: string;
+  author: string;
   created_at: string;
   updated_at: string;
 }

@@ -1,32 +1,21 @@
 <script lang="ts">
-  import { Button } from "$lib/components";
   import { formatDate } from "$lib/utils/date";
 
   let { data } = $props();
 </script>
 
-<section class="grid grid-cols-1">
-  {#each data.documents as { id, title, category, name, created_at, updated_at }}
-    <div
-      class="mt-3 border-dashed border-b-2 border-l-2 hover:border-solid p-3"
-    >
-      <a href={`documents/${id}`}>
-        <div class="flex justify-between items-center">
-          <div class="uppercase">
-            <h1 class="text-3xl">{title}</h1>
-            <ul>
-              <li>{`Category: ${category}`}</li>
-              <li>{`Author: ${name}`}</li>
-              <li>{`Created: ${formatDate(created_at)}`}</li>
-              <li>{`Edited: ${formatDate(updated_at)}`}</li>
-            </ul>
-          </div>
+<section class="mt-6">
+  {#each data.documents as { id, title, category, author, created_at, updated_at }}
+    <article class="border-dashed border-b-2 border-l-2 hover:border-solid p-2">
+      <a href="document/{id}" class="block">
+        <div class="uppercase flex flex-col justify-between">
+          <h1 class="text-3xl">{title}</h1>
+          <p>{`Category: ${category}`}</p>
+          <p>{`Author: ${author}`}</p>
+          <p>{`Created: ${formatDate(created_at)}`}</p>
+          <p>{`Edited: ${formatDate(updated_at)}`}</p>
         </div>
       </a>
-      <div>
-        <Button>Edit</Button>
-        <Button>Delete</Button>
-      </div>
-    </div>
+    </article>
   {/each}
 </section>

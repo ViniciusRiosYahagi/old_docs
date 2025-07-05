@@ -6,5 +6,5 @@
 
 <input
   {...props}
-  class="border-b-1 border-dashed hover:border-solid focus:border-solid outline-0"
+  class="border-b-2 hover:border-solid focus:border-solid outline-0"
 />

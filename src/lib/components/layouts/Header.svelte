@@ -3,8 +3,8 @@
 </script>
 
 <header class="flex justify-between items-center">
-  <h1 class="text-6xl">
-    <a href="/">Our Documents</a>
+  <h1 class="text-2xl lg:text-6xl">
+    <a href="/">X3-D</a>
   </h1>
 
   <nav class="flex gap-6 items-cener">
