@@ -7,7 +7,7 @@
 {#if href}
   <a
     {href}
-    class="border-2 p-1 cursor-pointer hover:border-solid active:translate-y-0.5"
+    class="border-2 p-1 cursor-pointer hover:border-solid active:translate-y-0.5 uppercase"
     >{@render children()}</a
   >
 {:else}

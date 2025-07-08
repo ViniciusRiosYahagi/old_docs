@@ -12,7 +12,16 @@ export interface DocumentProps {
 
 export interface ButtonProps {
   href?: string;
-  type?: string
-  onclick?: (key: Event) => void
+  type?: string;
+  onclick?: (key: Event) => void;
   children: Snippet;
+}
+
+export interface ControllersProps {
+  edit?: boolean;
+  deletee?: boolean;
+  back?: boolean;
+  publish?: boolean;
+  home?: boolean
+  id?: string;
 }

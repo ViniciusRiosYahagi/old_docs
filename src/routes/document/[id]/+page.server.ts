@@ -13,3 +13,4 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
     document: data 
   }
 };
+
