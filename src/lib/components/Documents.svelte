@@ -2,13 +2,14 @@
   import { formatDate } from "$lib/utils/date";
 
   let { data } = $props();
+  let documents = $derived(data.data)
 </script>
 
 <section class="mt-6">
-  {#if !data.documents || data.documents.length === 0}
+  {#if !documents || documents.length === 0}
     <h1 class="text-2xl">Empty</h1>
   {:else}
-    {#each data.documents as { id, title, category, author, created_at, updated_at }}
+    {#each documents as { id, title, category, author, created_at, updated_at }}
       <article
         class="border-dashed border-b-2 border-l-2 hover:border-solid p-2 mt-3"
       >

@@ -1,4 +1,4 @@
-  export function formatDate(dateFromDb: string) {
+export function formatDate(dateFromDb: string) {
     const date = new Date(dateFromDb)
     return date.toLocaleDateString("en", {
       day: "2-digit",

@@ -5,8 +5,7 @@
   import { Controllers } from "$lib/components";
 
   let { data }: PageProps = $props();
-  let { id, title, author, category, content, created_at, updated_at } =
-    $derived(data.document);
+  let { id, title, author, category, content, created_at, updated_at } = $derived(data);
 </script>
 
 <section class="mt-6">
