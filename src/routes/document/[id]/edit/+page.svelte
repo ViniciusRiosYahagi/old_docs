@@ -4,7 +4,7 @@
   import type { PageProps } from "./$types";
 
   let { data, form }: PageProps = $props();
-  let { title, author, category, content, id } = $derived(data.document);
+  let { title, author, category, content, id } = $derived(data.data);
   let rows = $state(17);
 </script>
 

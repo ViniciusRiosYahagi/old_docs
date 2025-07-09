@@ -1,11 +1,13 @@
 <script lang="ts">
   import type { PageProps } from "./$types";
 
+  import { marked } from "marked";
   import { formatDate } from "$lib/utils/date";
   import { Controllers } from "$lib/components";
 
   let { data }: PageProps = $props();
-  let { id, title, author, category, content, created_at, updated_at } = $derived(data);
+  let { id, title, author, category, content, created_at, updated_at } =
+    $derived(data.data);
 </script>
 
 <section class="mt-6">
@@ -14,10 +16,12 @@
     <div class="flex flex-col gap-12">
       <h1 class="text-3xl text-center uppercase break-words">{title}</h1>
       <div class="flex flex-col sm:flex-row justify-between gap-2">
-        <p>{`Author: ${author}`}</p>
+        <p>{`Created by: ${author}`}</p>
         <p>{`Category: ${category}`}</p>
       </div>
-      <p class="whitespace-pre-line break-words">{content}</p>
+      <div class="prose max-w-none text-black break-words w-full">
+        {@html marked(content)}
+      </div>
       <div class="text-end">
         <p>{"Created:" + " " + formatDate(created_at)}</p>
         <p>{"Edited:" + " " + formatDate(updated_at)}</p>

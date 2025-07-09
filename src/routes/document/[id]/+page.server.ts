@@ -9,10 +9,7 @@ export const load: PageServerLoad = async ({ params }) => {
   if (!response.data) {
     throw new Error("Item not found");
   }
-
-
-  console.log(data)
   
-  return data
+  return { data }
 };
 
