@@ -3,12 +3,28 @@
 @plugin '@tailwindcss/typography';
 
 :root {
-   --color1: #e0e0e0;
-   --color2: rgb(147, 248, 255);
-   --color3: blue;
+   --color1: #dbdbdb;
+   --color2: rgb(0, 0, 0);
 }
 
 body, html {
    font-family: "Courier Prime", monospace;
    background-color: var(--color1);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #docs, #docs * {
+    visibility: visible;
+  }
+
+  #docs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }

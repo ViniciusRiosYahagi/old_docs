@@ -18,10 +18,12 @@ export interface ButtonProps {
 }
 
 export interface ControllersProps {
+  create?: boolean;
   edit?: boolean;
   deletee?: boolean;
   back?: boolean;
   publish?: boolean;
-  home?: boolean
+  home?: boolean;
+  print?: boolean;
   id?: string;
 }

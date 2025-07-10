@@ -10,22 +10,23 @@
     $derived(data.data);
 </script>
 
-<section class="mt-6">
-  <Controllers back edit deletee {id} />
-  <div class="max-w-1/2 mx-auto">
-    <div class="flex flex-col gap-12">
-      <h1 class="text-3xl text-center uppercase break-words">{title}</h1>
-      <div class="flex flex-col sm:flex-row justify-between gap-2">
-        <p>{`Created by: ${author}`}</p>
-        <p>{`Category: ${category}`}</p>
-      </div>
-      <div class="prose max-w-none text-black break-words w-full">
-        {@html marked(content)}
-      </div>
-      <div class="text-end">
-        <p>{"Created:" + " " + formatDate(created_at)}</p>
-        <p>{"Edited:" + " " + formatDate(updated_at)}</p>
-      </div>
+<Controllers back edit deletee print {id} />
+
+<div class="lg:max-w-1/2 mx-auto" id="docs">
+  <div class="flex flex-col gap-12">
+    <h1 class="text-xl text-center uppercase break-words lg:text-3xl">
+      {title}
+    </h1>
+    <div>
+      <p>{`Created by: ${author}`}</p>
+      <p>{`Category: ${category}`}</p>
+    </div>
+    <div class="prose max-w-none text-[var(--color2)] break-words w-full">
+      {@html marked(content)}
+    </div>
+    <div class="text-start lg:text-end">
+      <p>{"Created:" + " " + formatDate(created_at)}</p>
+      <p>{"Edited:" + " " + formatDate(updated_at)}</p>
     </div>
   </div>
-</section>
+</div>

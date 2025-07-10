@@ -24,4 +24,6 @@
   <p>Loading...</p>
 {:then data}
   <Documents {data} />
+{:catch error}
+  <p>{error.message}</p>
 {/await}

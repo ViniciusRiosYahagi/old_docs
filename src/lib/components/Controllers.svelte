@@ -3,17 +3,27 @@
 
   import { goto } from "$app/navigation";
   import { Button, DeleteButton } from "$lib/components";
+  import { printPage } from "$lib/utils/print";
 
-  let { home, publish, edit, deletee, back, id = "" }: ControllersProps = $props();
+  let {
+    create,
+    print,
+    home,
+    publish,
+    edit,
+    deletee,
+    back,
+    id = "",
+  }: ControllersProps = $props();
 </script>
 
-<div class="flex justify-end gap-3">
+<div class="flex justify-center gap-3 my-6 lg:justify-end">
   {#if edit}
     <Button href="/document/{id}/edit">Edit</Button>
   {/if}
 
   {#if deletee}
-    <DeleteButton  {id}/>
+    <DeleteButton {id} />
   {/if}
 
   {#if publish}
@@ -27,5 +37,12 @@
   {#if home}
     <Button onclick={() => goto("/")}>Home</Button>
   {/if}
-</div>
 
+  {#if print}
+    <Button onclick={() => printPage()}>Print</Button>
+  {/if}
+
+  {#if create}
+    <Button href="/create">Create</Button>
+  {/if}
+</div>

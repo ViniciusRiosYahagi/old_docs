@@ -8,7 +8,7 @@
   let rows = $state(17);
 </script>
 
-<Controllers home back/>
+<Controllers home back />
 
 {#if form?.errors}
   {#each form.errors as error}
@@ -20,7 +20,7 @@
   <div class="flex flex-col gap-6 mt-6 mb-3">
     <Input type="hidden" name="id" bind:value={id} />
     <Input type="text" name="title" placeholder="Title" bind:value={title} />
-    <div class="flex gap-6">
+    <div class="flex flex-col gap-6 lg:flex-row">
       <Input
         type="text"
         name="category"
