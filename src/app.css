@@ -3,7 +3,7 @@
 @plugin '@tailwindcss/typography';
 
 :root {
-   --color1: #dbdbdb;
+   --color1: #ffffff;
    --color2: rgb(0, 0, 0);
 }
 

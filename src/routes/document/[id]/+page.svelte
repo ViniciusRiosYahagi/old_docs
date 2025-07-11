@@ -17,14 +17,14 @@
     <h1 class="text-xl text-center uppercase break-words lg:text-3xl">
       {title}
     </h1>
-    <div>
+    <div class="text-center">
       <p>{`Created by: ${author}`}</p>
       <p>{`Category: ${category}`}</p>
     </div>
     <div class="prose max-w-none text-[var(--color2)] break-words w-full">
       {@html marked(content)}
     </div>
-    <div class="text-start lg:text-end">
+    <div class="text-end">
       <p>{"Created:" + " " + formatDate(created_at)}</p>
       <p>{"Edited:" + " " + formatDate(updated_at)}</p>
     </div>

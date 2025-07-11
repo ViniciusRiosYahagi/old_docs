@@ -1,5 +1,6 @@
 <script lang="ts">
   import { formatDate } from "$lib/utils/date";
+  import { fade, slide } from "svelte/transition";
 
   let { data } = $props();
   let documents = $derived(data.data);
@@ -15,16 +16,16 @@
       >
         <a href="document/{id}" class="block">
           <div
-            class="uppercase flex justify-between lg:items-end flex-col lg:flex-row"
+            class="flex justify-between lg:items-end flex-col lg:flex-row"
           >
             <div>
-              <h1 class="text-xl lg:text-3xl">{title}</h1>
+              <h1 class="text-xl lg:text-4xl uppercase">{title}</h1>
               <div class="text-sm lg:text-base">
                 <p>{`Category: ${category}`}</p>
                 <p>{`Author: ${author}`}</p>
               </div>
             </div>
-            <div class="hidden lg:block">
+            <div class="hidden lg:block text-end">
               <p>{`Created: ${formatDate(created_at)}`}</p>
               <p>{`Edited: ${formatDate(updated_at)}`}</p>
             </div>
