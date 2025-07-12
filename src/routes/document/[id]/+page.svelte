@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { PageProps } from "./$types";
-
   import { marked } from "marked";
   import { formatDate } from "$lib/utils/date";
   import { Controllers } from "$lib/components";

@@ -14,6 +14,7 @@
       goto("/");
     }
   }
+
 </script>
 
 <Button onclick={() => (isOpen = !isOpen)}>Delete</Button>
@@ -30,7 +31,7 @@
       </p>
       <div>
         <Button onclick={() => deleteDocument()}>Yes</Button>
-        <Button onclick={() => (isOpen = false)}>Cancel</Button>
+        <Button onclick={() => (isOpen = !isOpen)}>Cancel</Button>
       </div>
     </div>
   </div>

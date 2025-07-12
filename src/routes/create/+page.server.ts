@@ -10,7 +10,7 @@ export const actions: Actions = {
     const errors = validateDocument(data)
     if (errors.length) return fail(400, { errors })
 
-    const response = await api.post("/documents", data)
+    const response = await api.post("/documents/create", data)
   
     if (!response.data) {
       errors.push("Server Error");

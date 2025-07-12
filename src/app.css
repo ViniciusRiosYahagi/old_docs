@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
 :root {
-   --color1: #ffffff;
-   --color2: rgb(0, 0, 0);
+  --color1: #ffffff;
+  --color2: rgb(0, 0, 0);
 }
 
-body, html {
-   font-family: "Courier Prime", monospace;
-   background-color: var(--color1);
+* {
+  color: var(--color2);
+}
+
+body,
+html {
+  font-family: "Courier Prime", monospace;
+  background-color: var(--color1);
 }
 
 @media print {
@@ -17,7 +22,8 @@ body, html {
     visibility: hidden;
   }
 
-  #docs, #docs * {
+  #docs,
+  #docs * {
     visibility: visible;
   }
 
